@@ -474,12 +474,16 @@
 				const hashId = input.value.trim()
 
 				if (hashId.length === 0) {
-					input.classList.add('error')
-					input.placeholder = 'Enter hash id'
+					input.classList.remove('error')
+					document.getElementById('diamond').style.display = 'none' // Скрыть алмаз
+					startShuffle()//input.classList.add('error')
+					//input.placeholder = 'Enter hash id'
 				} else if (hashId.length !== 128) {
-					input.classList.add('error')
-					input.placeholder = 'Invalid Hash ID'
-					input.value = '' // Очистка поля ввода
+					input.classList.remove('error')
+					document.getElementById('diamond').style.display = 'none' // Скрыть алмаз
+					startShuffle()//input.classList.add('error')
+					//input.placeholder = 'Invalid Hash ID'
+					//input.value = '' // Очистка поля ввода
 				} else {
 					input.classList.remove('error')
 					document.getElementById('diamond').style.display = 'none' // Скрыть алмаз
